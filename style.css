@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --brand1: #f4b510;
+    --brand2:#55615f;
+    --brand3: #e7f5f6;
+    --brand4: #f1f1f1;
+    --brand5: #ffffff;
+}
+
+/* globalCSS */
+
+html, body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin:0;
+    padding:0;
+    color: var(--brand2);
+    background-color: var(--brand1);
+}  
+a {
+    cursor: pointer;
+}
+* {
+    box-sizing: border-box;
+}
+
+/* resetCSS */
+
+html,main, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    font-family: 'Inter', sans-serif;
+    vertical-align: baseline;
+    scroll-behavior: smooth;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--brand5);
+    min-width: 56.25rem;
+    width: 70%;
+    height: 85%;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.left-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    gap: 2.5rem;
+    border-right: 1px solid var(--brand4) ;
+}
+
+.left-content img {
+    width: 9.5rem;
+    height: 9.5rem;
+    border-radius: 100%;
+}
+
+.left-content h1 {
+    width: 60%;
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: 400;
+}
+
+.left-content p {
+    white-space: nowrap;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.right-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    gap: 1rem;
+}
+
+.right-content a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--brand3);
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: 70%;
+    height: 5rem;
+    border-radius: 3rem;
+    color: var(--brand2);
+    font-size: 1.2rem;
+}
+
+.right-content a:hover {
+    filter: brightness(97%);
+}
+@media(max-width: 950px) {
+    main {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        min-width: unset;
+    }
+    
+    .left-content h1 {
+        width: 60%;
+    }
+    
+    .right-content a {
+        height: 4rem;
+        border-radius: 3rem;
+        font-size: 1rem;
+    }
+}
+@media(max-width: 600px) {
+    main {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        flex-direction: column;
+        gap: 1.875rem;
+        min-width: unset;
+    }
+
+    .left-content {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+        border-right: none;
+        border-bottom: 1px solid var(--brand4);
+    }
+
+    .left-content img {
+        width: 5.5rem;
+        height: 5.5rem;
+    }
+
+    .left-content h1 {
+        max-width: 13.625rem;
+        font-size: 2.2rem;
+    }
+
+    .left-content p {
+        font-size: 1.2rem;
+    }
+
+    .right-content {
+        width: 100%;
+        gap: .5rem;
+    }
+
+    .right-content a {
+        max-width: 20rem;
+        width: 85%;
+        height: 3.3rem;
+        border-radius: 3rem;
+        font-size: 1rem;
+    }
+}
