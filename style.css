@@ -19,7 +19,11 @@ html, body {
     margin:0;
     padding:0;
     color: var(--brand2);
-    background-color: var(--brand1);
+    /* background-color: var(--brand1); */
+    background: url("./assets/bg_fundo_home-1024x683.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }  
 a {
     cursor: pointer;
